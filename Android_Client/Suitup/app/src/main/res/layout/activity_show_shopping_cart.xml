@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundv2">
+
+    <ListView
+        android:id="@+id/shopcart_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+    </ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shoppingcart_list"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/address_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/address_input"
+            android:hint="Input your receive address here "
+        />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/buy_button" style="?android:textAppearanceSmall"
+        android:layout_width="wrap_content" android:layout_height="64px"
+        android:layout_marginTop="16dp" android:text="Buy"
+        android:textStyle="bold"
+        android:textSize="25px"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>

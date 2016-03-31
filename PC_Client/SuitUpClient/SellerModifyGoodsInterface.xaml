@@ -1,0 +1,95 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
+        xmlns:wpfExample="clr-namespace:MaterialDesignColors.WpfExample"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        Style="{DynamicResource NoResize_window}"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        x:Class="chpoi.suitup.ui.SellerModifyGoodsInterface"
+        Title="个人空间" Height="640" Width="800"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        WindowStartupLocation ="CenterScreen"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Name="buyerInterface">
+        <Rectangle Fill="#FF2C2F36" HorizontalAlignment="Left" Margin="0,-2,0,0" Stroke="#FF2C2F36" Width="780" Grid.ColumnSpan="2" d:IsLocked="True"/>
+        <Rectangle Fill="#FF2861EE" HorizontalAlignment="Left"  Width="142" Margin="0,-2,0,557"/>
+        <Rectangle Fill="White" Margin="142,63,0,0" Height="557" VerticalAlignment="Top" Grid.ColumnSpan="2" d:IsLocked="True"/>
+        <Rectangle Fill="#FFEEF1F8" Height="54" Margin="143,63,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#FFEEF1F8" Margin="0,122,365,250" HorizontalAlignment="Right" Width="200" Stroke="#FF9EBDF4" StrokeThickness="6"/>
+        <Rectangle Fill="#FFB7CCFF" Margin="142,378,301,-1"/>
+        <Rectangle Fill="#FFC9D9FF" Margin="479,117,0,0" d:IsLocked="True"/>
+        <StackPanel Margin="10,0,0,557" HorizontalAlignment="Left" Width="128" Orientation="Vertical">
+            <Image Height="86" Source="image/logo1.gif" Stretch="Fill" HorizontalAlignment="Center" Width="118" Margin="5,0" />
+        </StackPanel>
+        <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                    Margin="743,-4,0,587" HorizontalAlignment="Left" Height="Auto" Click="CloseButtonClick" Width="36">
+            <Viewbox Width="24" Height="24">
+                <Canvas Width="24" Height="24">
+                    <Image Source="image/off.png" Height="24" Width="24"></Image>
+                </Canvas>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                    Margin="710,-4,0,587" HorizontalAlignment="Left" Height="Auto" Click="MinimizeButtonClick">
+            <Viewbox Width="24" Height="24" Margin="0">
+                <Canvas Width="24" Height="24">
+                    <Image Source="image/minimize.png" Height="24" Width="24"></Image>
+                </Canvas>
+            </Viewbox>
+        </Button>
+            <Image Name="AvatarImage" Stretch="Fill" HorizontalAlignment="Center" Width="178" Margin="225,130,377,260" />
+
+        <Button Name="LogOutButton" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="80" Click="LogOutButtonClick" Margin="30,85,670,503">
+            注销
+        </Button>
+
+        <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Margin="385,73,174,513" RenderTransformOrigin="0.5,0.5">
+            商品信息
+        </TextBlock>
+        <StackPanel Orientation="Vertical" Margin="0,136,0,28" HorizontalAlignment="Left" Width="142">
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="订单管理" Click="OrderManageButtonClick"/>
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="商品管理" Click="GoodsManageButtonClick"/>
+        </StackPanel>
+
+        <StackPanel Name="SuitNameSP" Margin="515,172,42,419" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="名称："/></TextBlock>
+            <TextBlock Name="OldSuitName"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="157"></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifySuitNameSP" Margin="515,172,42,419" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="名称："/></TextBlock>
+            <TextBox x:Name="InputSuitName" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="128" FontSize="20" Margin="0,-5,0,0"/>
+        </StackPanel>
+
+        <StackPanel Name="PriceSP" Margin="515,216,42,375" Orientation="Horizontal"  Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="价格："/></TextBlock>
+            <TextBlock Name="OldPrice"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="158"></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyPriceSP" Margin="515,216,42,375" Orientation="Horizontal"  Height="29"  Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="价格："/></TextBlock>
+            <TextBox Name="InputPrice" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="128" FontSize="20" Margin="0,-5,0,0"/>
+        </StackPanel>
+
+        <Button Name="SaveChangesButton" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignRaisedLightButton}"  Width="66" Height="32" Content="保存" Click="SaveChangesButtonClick" Margin="0,480,186,108" Visibility="Collapsed"/>
+        <Button Name="CancelchangesButton" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignRaisedLightButton}"  Width="66" Height="32" Content="取消" Click="CancelChangesButtonClick" Margin="0,480,87,108" Visibility="Collapsed"/>
+        <StackPanel Margin="515,480,0,108"  HorizontalAlignment="Left" Width="232">
+            <Button Name="ModifyButton" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="80" Click="ModifyButtonClick">
+                修改
+            </Button>
+        </StackPanel>
+        <Button x:Name="UploadPictureButton" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="92" Click="UploadPictureButtonClick" Content="更改图片" Margin="262,531,426,57"/>
+    </Grid>
+</Window>

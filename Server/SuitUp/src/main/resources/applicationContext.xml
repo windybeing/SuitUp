@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+	http://www.springframework.org/schema/data/mongo
+    http://www.springframework.org/schema/data/mongo/spring-mongo-1.7.xsd">
+
+	<context:annotation-config/> 
+    <!--MongoDB 配置-->  
+	<mongo:mongo host="127.0.0.1" port="27017" />  
+ 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">  
+    	<constructor-arg ref="mongo"/>  
+    	<constructor-arg name="databaseName" value="suitup"/> 
+	</bean>  
+	
+	
+    <!--Hibernate MYSQL 配置-->  
+    <bean id="dataSource"    class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/store?characterEncoding=utf8" />
+        <property name="username" value="root" />
+        <property name="password" value="" />
+    </bean>
+    
+    <bean id="sessionFactory"  
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">  
+        <property name="configLocation" value="classpath:hibernate.cfg.xml"></property>  
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">  
+      <property name="sessionFactory" ref="sessionFactory"/>
+ 	</bean>  
+ 	
+ 	
+ 
+   <!-- ————————————————————————————————————Repository 配置 —————————————————————————————————————————— -->  
+   <!--ClientRepository 配置-->  
+   <bean id="clientMongoRepository" class="chpoi.suitup.repository.mongo.impl.ClientMongoRepositoryImpl"/>
+   <bean id="clientSQLRepository" class="chpoi.suitup.repository.sql.impl.ClientSQLRepositoryImpl"/>  
+   
+   <!--SellerRepository 配置-->
+   <bean id="sellerSQLRepository" class="chpoi.suitup.repository.sql.impl.SellerSQLRepositoryImpl"/>
+   <bean id="sellerMongoRepository" class="chpoi.suitup.repository.mongo.impl.SellerMongoRepositoryImpl"/>
+   
+   <!--ManufacturerRepository 配置-->
+   <bean id="manufacturerSQLRepository" class="chpoi.suitup.repository.sql.impl.ManufacturerSQLRepositoryImpl"/>
+   <bean id="manufacturerMongoRepository" class="chpoi.suitup.repository.mongo.impl.ManufacturerMongoRepositoryImpl"/>
+   
+   <!--OrderRepository 配置-->
+   <bean id="orderMongoRepository" class="chpoi.suitup.repository.mongo.impl.OrderMongoRepositoryImpl"/>
+   
+   <!--SuitRepository 配置-->
+   <bean id="suitSQLRepository" class="chpoi.suitup.repository.sql.impl.SuitSQLRepositoryImpl"/>
+   <bean id="suitMongoRepository" class="chpoi.suitup.repository.mongo.impl.SuitMongoRepositoryImpl"/>
+
+   <!--PhotoRepository 配置-->
+   <bean id="photoMongoRepository" class="chpoi.suitup.repository.mongo.impl.PhotoMongoRepositoryImpl"/>
+   
+   
+   <!-- ————————————————————————————————————Service 配置 —————————————————————————————————————————— -->  
+   <!--ClientService 配置-->
+   <bean id="clientService" class="chpoi.suitup.service.impl.ClientServiceImpl"/>
+   <!--SellerService 配置-->
+   <bean id="sellerService" class="chpoi.suitup.service.impl.SellerServiceImpl"/>
+   <!--ManufacturerService 配置-->
+   <bean id="manufacturerService" class="chpoi.suitup.service.impl.ManufacturerServiceImpl"/>
+   <!--OrderService 配置-->
+   <bean id="orderService" class="chpoi.suitup.service.impl.OrderServiceImpl"/>
+   <!--SuitService 配置-->
+   <bean id="suitService" class="chpoi.suitup.service.impl.SuitServiceImpl"/>
+   <!--PhotoService 配置-->
+   <bean id="photoService" class="chpoi.suitup.service.impl.PhotoServiceImpl"/>   
+   
+   <!-- ————————————————————————————————————Handler 配置 —————————————————————————————————————————— -->  
+   <!--LoginHandler 配置-->
+   <bean id="loginHandler" class="chpoi.suitup.handler.impl.LoginHandlerImpl"/>
+   <!--RegisterHandler 配置-->
+   <bean id="registerHandler" class="chpoi.suitup.handler.impl.RegisterHandlerImpl"/>
+   <!--QueryHandler 配置-->
+   <bean id="queryHandler" class="chpoi.suitup.handler.impl.QueryHandlerImpl"/>
+   <!--"CreateHandler" 配置-->
+   <bean id="createHandler" class="chpoi.suitup.handler.impl.CreateHandlerImpl"/>
+   <!--GetHandler 配置-->
+   <bean id="getHandler" class="chpoi.suitup.handler.impl.GetHandlerImpl"/>
+   <!--GetHandler 配置-->
+   <bean id="modifyHandler" class="chpoi.suitup.handler.impl.ModifyHandlerImpl"/>
+   <!--DeleteHandler 配置-->
+   <bean id="deleteHandler" class="chpoi.suitup.handler.impl.DeleteHandlerImpl"/>
+   <!--PurchaseHandler 配置-->
+   <bean id="purchaseHandler" class="chpoi.suitup.handler.impl.PurchaseHandlerImpl"/>
+
+   <!--requestResolver 配置-->
+   <bean id="requestResolver" class="chpoi.suitup.controller.RequestResolver"/>
+</beans>

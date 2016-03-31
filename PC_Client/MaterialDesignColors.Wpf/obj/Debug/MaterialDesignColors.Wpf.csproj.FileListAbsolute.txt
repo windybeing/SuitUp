@@ -1,0 +1,58 @@
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\bin\Debug\MaterialDesignColors.dll
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\bin\Debug\MaterialDesignColors.pdb
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.Wpf.csprojResolveAssemblyReference.cache
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Amber.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Black.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Blue.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.BlueGrey.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Brown.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Cyan.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.DeepOrange.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.DeepPurple.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Green.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Grey.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Indigo.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.LightBlue.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.LightGreen.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Lime.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Orange.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Pink.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Purple.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Red.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Teal.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Yellow.baml
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors_MarkupCompile.cache
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.g.resources
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.Properties.Resources.resources
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.Wpf.csproj.GenerateResource.Cache
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.dll
+D:\学习\intel大赛\UI设计\image\MaterialDesignInXamlToolKit\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.pdb
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\bin\Debug\MaterialDesignColors.dll
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\bin\Debug\MaterialDesignColors.pdb
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.Wpf.csprojResolveAssemblyReference.cache
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Amber.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Black.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Blue.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.BlueGrey.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Brown.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Cyan.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.DeepOrange.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.DeepPurple.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Green.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Grey.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Indigo.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.LightBlue.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.LightGreen.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Lime.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Orange.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Pink.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Purple.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Red.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Teal.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColor.Yellow.baml
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors_MarkupCompile.cache
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.g.resources
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.Properties.Resources.resources
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.Wpf.csproj.GenerateResource.Cache
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.dll
+C:\Users\迪\documents\visual studio 2012\Projects\SuitUpClient\MaterialDesignColors.Wpf\obj\Debug\MaterialDesignColors.pdb

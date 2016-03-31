@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <service>ClientServiceImpl</service>
+  <service>GoodsServiceImpl</service>
+  <service>ImageServiceImpl</service>
+  <service>ShoppintCartSercieImpl</service>
+  <service>SslServiceImpl</service>
+  <service>SellerServiceImpl</service>
+  <service>OrderServiceImpl</service>
+  <service>ScanServiceImpl</service>
+  <service>ManufacturerServiceImpl</service>
+</config>

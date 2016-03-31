@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9BDD9B8-99A8-483E-B67D-26A8CDAB9BEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chpoi.Suitup</RootNamespace>
+    <AssemblyName>SuitUpClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.DebuggerVisualizers.VS2008">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.DebuggerVisualizers.VS2008.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.DebuggerVisualizers.VS2010">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.DebuggerVisualizers.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.DebuggerVisualizers.VS2012">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.DebuggerVisualizers.VS2012.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.DebuggerVisualizers.VS2013">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.DebuggerVisualizers.VS2013.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.GPU">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.GPU.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.ML">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.ML.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.OCR">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.OCR.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.OpenCL">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.OpenCL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Stitching">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.Stitching.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.VideoStab">
+      <HintPath>D:\src\emgucv\bin\Emgu.CV.VideoStab.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>D:\src\emgucv\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ZedGraph">
+      <HintPath>D:\src\emgucv\bin\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BuyerInterfaceBodyParameters.xaml.cs">
+      <DependentUpon>BuyerInterfaceBodyParameters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\ListFieldsViewModel.cs" />
+    <Compile Include="Domain\SelectableViewModel.cs" />
+    <Compile Include="Domain\TextFieldsViewModel.cs" />
+    <Compile Include="entity\CurOrder.cs" />
+    <Compile Include="entity\ClientOrder.cs" />
+    <Compile Include="entity\SellerOrder.cs" />
+    <Compile Include="entity\SellerOrderitem.cs" />
+    <Compile Include="entity\ShoppingCartItem.cs" />
+    <Compile Include="entity\Client.cs" />
+    <Compile Include="entity\Manufacturer.cs" />
+    <Compile Include="entity\Order.cs" />
+    <Compile Include="entity\ClientOrderitem.cs" />
+    <Compile Include="entity\Parameter.cs" />
+    <Compile Include="entity\Seller.cs" />
+    <Compile Include="entity\ShoppingCart.cs" />
+    <Compile Include="entity\Suit.cs" />
+    <Compile Include="list.cs" />
+    <Compile Include="openFileDialog.cs" />
+    <Compile Include="SellerLoginInterface.xaml.cs">
+      <DependentUpon>SellerLoginInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceImpl\ManufacturerServiceImpl.cs" />
+    <Compile Include="ServiceImpl\OrderServiceImpl.cs" />
+    <Compile Include="ServiceImpl\ScanServiceImpl.cs" />
+    <Compile Include="ServiceImpl\SslServiceImpl.cs" />
+    <Compile Include="ServiceImpl\SellerServiceImpl.cs" />
+    <Compile Include="Service\ClientService.cs" />
+    <Compile Include="ServiceImpl\ClientServiceImpl.cs" />
+    <Compile Include="ServiceImpl\GoodsServiceImpl.cs" />
+    <Compile Include="ProvingGround.xaml.cs" />
+    <Compile Include="RegisterInterface.xaml.cs">
+      <DependentUpon>RegisterInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service\GoodsService.cs" />
+    <Compile Include="Service\ImageService.cs" />
+    <Compile Include="ServiceImpl\ImageServiceImpl.cs" />
+    <Compile Include="ServiceImpl\ShoppingCartServiceImpl.cs" />
+    <Compile Include="Service\ManufacturerService.cs" />
+    <Compile Include="Service\OrderService.cs" />
+    <Compile Include="Service\ScanService.cs" />
+    <Compile Include="Service\SslService.cs" />
+    <Compile Include="Service\SellerService.cs" />
+    <Compile Include="ShoppingcartInterface.xaml.cs">
+      <DependentUpon>ShoppingcartInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SourceManager.cs" />
+    <Compile Include="SslTcpClient.cs" />
+    <Compile Include="StartWindow.xaml.cs">
+      <DependentUpon>StartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserConfirmOrder.xaml.cs">
+      <DependentUpon>UserConfirmOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserOrderInterface.xaml.cs">
+      <DependentUpon>UserOrderInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="util\ServiceFactory.cs" />
+    <Compile Include="util\IPFactory.cs" />
+    <Compile Include="SellerOrderInterface.xaml.cs" />
+    <Compile Include="SellerRegisterInterface.xaml.cs">
+      <DependentUpon>SellerRegisterInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SellerInforInterface.xaml.cs">
+      <DependentUpon>SellerInforInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserDetailOrderInterface.xaml.cs">
+      <DependentUpon>UserDetailOrderInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SellerDetailOrderInterface.xaml.cs">
+      <DependentUpon>SellerDetailOrderInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SellerGoodsInterface.xaml.cs" />
+    <Compile Include="SellerModifyGoodsInterface.xaml.cs">
+      <DependentUpon>SellerModifyGoodsInterface.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SellerAddGoodsInterface.xaml.cs">
+      <DependentUpon>SellerAddGoodsInterface.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BuyerInterfaceBodyParameters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GoodsInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BuyerInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginInterface.xaml.cs" />
+    <Compile Include="GoodsInterface.xaml.cs" />
+    <Compile Include="BuyerInterface.xaml.cs">
+      <DependentUpon>BuyerInterface.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Palette.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProvingGround.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RegisterInterface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SellerLoginInterface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShoppingcartInterface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserConfirmOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserOrderInterface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SellerOrderInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SellerRegisterInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SellerInforInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserDetailOrderInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SellerDetailOrderInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SellerGoodsInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SellerModifyGoodsInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SellerAddGoodsInterface.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NotEmptyValidationRule.cs" />
+    <Compile Include="Palette.xaml.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="cer\server.cer" />
+    <None Include="cer\server_key.cer" />
+    <None Include="cer\SslSocket.cer" />
+    <None Include="ObjFile\3dscan.obj" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="server_key.cer" />
+    <Compile Include="Service\ShoppingCartService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="头像.png" />
+    <Resource Include="image\backgroundv2.jpg" />
+    <Resource Include="image\logo1.gif" />
+    <Resource Include="image\买家背景图.gif" />
+    <Resource Include="image\右上角小标.gif" />
+    <Resource Include="image\头像.png" />
+    <Resource Include="image\我的照片1.png" />
+    <Resource Include="image\我的照片2.png" />
+    <Resource Include="image\背景.jpg" />
+    <Resource Include="image\off.png" />
+    <Resource Include="image\minimize.png" />
+    <Resource Include="image\PersonAddWhite.png" />
+    <Resource Include="image\EmailWhite.png" />
+    <Resource Include="image\PersonAddBlack.png" />
+    <Resource Include="image\10.jpg" />
+    <Resource Include="image\11.jpg" />
+    <Resource Include="configuration\ServiceFactoryConfig.xml" />
+    <Resource Include="image\PhoneWhite.png" />
+    <Resource Include="image\lastBlack.png" />
+    <Resource Include="image\NextBlack.png" />
+    <Resource Include="image\backWhite.png" />
+    <Resource Include="configuration\IPFactoryConfig.xml" />
+    <Resource Include="image\alipay.gif" />
+    <Resource Include="image\new-btn-fixed.png" />
+    <Content Include="DF_3DScan.exe" />
+    <Content Include="DF_3DScan_d.exe" />
+    <Resource Include="image\IdentificationWhite.png" />
+    <Resource Include="image\示例图片1.jpg" />
+    <Resource Include="image\示例图片.jpg" />
+    <Content Include="ImageService.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Newtonsoft.Json.dll" />
+    <Resource Include="ScreenGrabFromGoogle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaterialDesignColors.Wpf\MaterialDesignColors.Wpf.csproj">
+      <Project>{90b53209-c60c-4655-b28d-a1b3e1044ba3}</Project>
+      <Name>MaterialDesignColors.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaterialDesignThemes.Wpf\MaterialDesignThemes.Wpf.csproj">
+      <Project>{f079fb0a-a8ed-4216-b6a5-345756751a04}</Project>
+      <Name>MaterialDesignThemes.Wpf</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

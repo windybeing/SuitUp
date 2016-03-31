@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping package="chpoi.suitup.entity.sql">    
+    <class name="ClientSQL" table="client_table"> 
+        <id name="_id" column="_id" type="string"> 
+            <generator class="assigned"/> 
+        </id> 
+        <property name="username" column="username" type="string" unique="true"/>
+        <property name="password" column="password" type="string"/>
+        <property name="email" column="email" type="string" unique="true"/>
+        <property name="phonenumber" column="phonenumber" type="string" unique="true"/>
+        <property name="clientname" column="clientname" type="string"/>
+        <property name="age" column="age" type="int"/>
+        <property name="address" column="address" type="string"/>
+    </class>
+    <class name="SellerSQL" table="seller_table"> 
+        <id name="_id" column="_id" type="string"> 
+            <generator class="assigned"/> 
+        </id> 
+        <property name="username" column="username" type="string" unique="true"/>
+        <property name="password" column="password" type="string"/>
+        <property name="email" column="email" type="string" unique="true"/>
+        <property name="phonenumber" column="phonenumber" type="string" unique="true"/>
+        <property name="manufacturer_id" column="manufacturer_id" type="string"/>
+    </class>
+    <class name="ManufacturerSQL" table="manufacturer_table"> 
+        <id name="_id" column="_id" type="string"> 
+            <generator class="assigned"/> 
+        </id> 
+        <property name="manufacturername" column="manufacturername" type="string" unique="true"/>
+        <property name="identification" column="identification" type="string" unique="true"/>
+    </class>
+    <class name="SuitSQL" table="suit_table"> 
+        <id name="_id" column="_id" type="string"> 
+            <generator class="assigned"/> 
+        </id> 
+        <property name="suitname" column="suitname" type="string" unique="true"/>
+        <property name="seller_id" column="seller_id" type="string"/>
+        <property name="manufacturer_id" column="manufacturer_id" type="string"/>
+        <property name="price" column="price" type="double"/>
+        <property name="used" column="used" type="int"/>
+    </class>
+</hibernate-mapping>

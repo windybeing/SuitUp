@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="MaterialDesignColors.WpfExample.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="640">
+  
+    <Grid x:Name="LayoutRoot">
+        <Image Source="image/背景.jpg" Stretch="Fill" Margin="-4,0,0,0" d:IsLocked="False"/>
+        <Rectangle Fill="#7F4C4C54" Stroke="#FF38373D" Margin="378,47,33,78"/>
+        <Image Height="85" Source="image/logo1.gif" Stretch="Fill" VerticalAlignment="Top" Margin="0,47,74,0" HorizontalAlignment="Right" Width="116"/>
+        <Image HorizontalAlignment="Right" Height="21" Source="image/右上角小标.gif" Stretch="Fill" VerticalAlignment="Top" Width="78" Margin="0,8,8,0"/>
+        <Path Data="M11.195133,10.112001 L14.667,18.227478 0.5,18.263001 4.1395921,10.254306 C4.1395921,10.254306 7.7234091,12.603593 11.195133,10.112001 z M8.218223,0.5 C10.173864,0.5 11.666286,2.0546918 11.551642,3.9725003 11.436997,5.8903093 9.7586998,7.4450004 7.8030595,7.4450004 5.8474192,7.4450004 4.3549971,5.8903093 4.4696416,3.9725003 4.5842857,2.0546918 6.2625827,0.5 8.218223,0.5 z" Fill="#FFF2F2F9" HorizontalAlignment="Right" Height="18.763" Margin="0,136.001,225.682,0" RenderTransformOrigin="0.50000008266917,0.75614237462396" Stretch="Fill" Stroke="#FFF2F2F9" VerticalAlignment="Top" Width="15.167" >
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="3.421"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.274"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Rectangle Fill="#FFF2F2F9" HorizontalAlignment="Right" Height="9.667" Margin="0,192.335,227.432,0" RadiusY="2.167" RadiusX="2.167" Stroke="#FFF2F2F9" VerticalAlignment="Top" Width="14.001"/>
+        <Path Data="M326,246.33333" Fill="#FFF2F2F9" HorizontalAlignment="Right" Height="1" Margin="0,0,297,193.667" Stretch="Fill" Stroke="#FFF2F2F9" VerticalAlignment="Bottom" Width="1"/>
+        <Path Data="M315,246.333 L315,215.66486" Fill="#FFF2F2F9" HorizontalAlignment="Right" Margin="0,188.335,238.098,0" Stretch="Fill" Stroke="#FFF2F2F9" Width="1" Height="9.667" VerticalAlignment="Top"/>
+        <Path Data="M348.667,215.665 L348.667,247.333" Fill="#FFF2F2F9" HorizontalAlignment="Right" Margin="0,188.335,229.723,0" Stretch="Fill" Stroke="#FFF2F2F9" Width="1" Height="9.667" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <Path Data="M385.29167,234.04167 C385.29167,234.04167 384.95799,231.04134 389.33299,231.08301 393.70799,231.12467 393.29182,231.58293 393.54183,234.04134" HorizontalAlignment="Right" Height="3.959" Margin="0,185.585,229.723,0" Stretch="Fill" Stroke="#FFF2F2F9" VerticalAlignment="Top" Width="9.375"/>
+    </Grid>
+</UserControl>

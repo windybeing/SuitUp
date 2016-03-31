@@ -1,0 +1,122 @@
+﻿<Window x:Class="chpoi.suitup.ui.UserOrderInterface"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:domain="clr-namespace:MaterialDesignColors.WpfExample.Domain"
+        xmlns:wpfExample="clr-namespace:MaterialDesignColors.WpfExample"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Style="{DynamicResource NoResize_window}"
+        WindowStartupLocation ="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        Title="商品" Height="640" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+
+        <Rectangle Fill="#FF2C2F36" HorizontalAlignment="Left" Margin="0,-2,0,0" Stroke="#FF2C2F36" Width="780" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#FF2861EE" HorizontalAlignment="Left"  Width="142" Margin="0,-2,0,557"/>
+        <Rectangle Fill="White" Margin="142,63,0,0" Stroke="Black" Height="557" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#FFEEF1F8" Height="54" Margin="143,63,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <StackPanel Margin="10,0,0,557" HorizontalAlignment="Left" Width="128" Orientation="Vertical">
+            <Image Height="86" Source="image/logo1.gif" Stretch="Fill" HorizontalAlignment="Center" Width="118" Margin="5,0" />
+        </StackPanel>
+
+        <Button Name="LogOutButton" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="80" Click="LogOutButtonClick" Margin="30,85,670,503">
+            注销
+        </Button>
+        <StackPanel Orientation="Vertical" Margin="0,136,0,28" HorizontalAlignment="Left" Width="142">
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="首页" Click="MainPageButtonClick"/>
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="个人中心" Click="BuyerInformationButtonClick"/>
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="我的订单" Click="BuyerOrderButtonClick"/>
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="我的购物车" Click="ShoppingCartButtonClick"/>
+        </StackPanel>
+        <StackPanel Margin="39,78,0,417"  HorizontalAlignment="Left" Width="232" Grid.Column="1"/>
+
+
+        <StackPanel Grid.ColumnSpan="2"/>
+
+
+        <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Margin="234,117,446,450" RenderTransformOrigin="0.5,0.5">
+            订单号
+        </TextBlock>
+        <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Margin="354,117,328,450" RenderTransformOrigin="0.5,0.5">
+            时间
+        </TextBlock>
+        <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Margin="452,117,228,450" RenderTransformOrigin="0.5,0.5">
+            金额
+        </TextBlock>
+        <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Margin="552,117,128,450" RenderTransformOrigin="0.5,0.5">
+            收件人
+        </TextBlock>
+        <ListBox x:Name="Lst"  Style="{StaticResource MaterialDesignCardsListBox}" Margin="183,175,37,50">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="100">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="180" />
+                            <ColumnDefinition Width="140" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Foreground="{DynamicResource FontGray}"  FontSize="10" Grid.Column="0" HorizontalAlignment="Center" Margin="0,10,0,10" Text="{Binding Path=_id}"></TextBlock>
+                        <TextBlock  Foreground="{DynamicResource FontGray}"  FontSize="10" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,10" Text="{Binding Path=time}"></TextBlock>
+                        <TextBlock  Foreground="{DynamicResource FontGray}"  FontSize="10" Grid.Column="2" HorizontalAlignment="Center" Margin="0,10,0,10" Text="{Binding Path=amount}"></TextBlock>
+                        <TextBlock  Foreground="{DynamicResource FontGray}"  FontSize="10" Grid.Column="3" HorizontalAlignment="Center" Margin="0,10,0,10" Text="{Binding Path=receiver}"></TextBlock>
+                        <Button Name="DetailButton" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedLightButton}" Click="DetailButtonClick" Margin="10,6,10,54" >
+                            详情
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ListBox>
+        <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+        	Margin="747,-2,-3,585" HorizontalAlignment="Left" Height="Auto" Click="CloseButtonClick" Width="36">
+            <Viewbox Width="24" Height="24">
+                <Canvas Width="24" Height="24">
+                    <Image Source="image/off.png" Height="24" Width="24"/>
+                </Canvas>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+        	Margin="714,-2,0,585" HorizontalAlignment="Left" Height="Auto" Click="MinimizeButtonClick">
+            <Viewbox Width="24" Height="24" Margin="0">
+                <Canvas Width="24" Height="24">
+                    <Image Source="image/minimize.png" Height="24" Width="24"/>
+                </Canvas>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+        	Margin="687,78,0,505" HorizontalAlignment="Left" Height="Auto" Click="NextPageButtonClick">
+            <Viewbox Width="24" Height="24" Margin="0">
+                <Canvas Width="24" Height="24">
+                    <Image Source="image/NextBlack.png" Height="24" Width="24"/>
+                </Canvas>
+            </Viewbox>
+        </Button>
+
+        <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+        	Margin="612,78,0,505" HorizontalAlignment="Left" Height="Auto" Click="PrePageButtonClick">
+            <Viewbox Width="24" Height="24" Margin="0">
+                <Canvas Width="24" Height="24">
+                    <Image Source="image/lastBlack.png" Height="24" Width="24"/>
+                </Canvas>
+            </Viewbox>
+        </Button>
+    </Grid>
+</Window>

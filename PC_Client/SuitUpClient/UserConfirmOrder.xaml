@@ -1,0 +1,198 @@
+﻿<Window x:Class="chpoi.suitup.ui.UserConfirmOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:domain="clr-namespace:MaterialDesignColors.WpfExample.Domain"
+        xmlns:wpfExample="clr-namespace:MaterialDesignColors.WpfExample"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Style="{DynamicResource NoResize_window}"
+        WindowStartupLocation ="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        Title="商品" Height="640" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Rectangle Fill="#FF2C2F36" HorizontalAlignment="Left" Margin="0,-2,0,0" Stroke="#FF2C2F36" Width="780" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#FF2861EE" HorizontalAlignment="Left"  Width="142" Margin="0,-2,0,557"/>
+        <Rectangle Fill="White" Margin="142,63,0,0" Stroke="Black" Height="557" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#FFEEF1F8" Height="54" Margin="143,63,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#FFC9D9FF" Margin="143,117,0,0"/>
+        <StackPanel Margin="10,0,0,557" HorizontalAlignment="Left" Width="128" Orientation="Vertical">
+            <Image Height="86" Source="image/logo1.gif" Stretch="Fill" HorizontalAlignment="Center" Width="118" Margin="5,0" />
+        </StackPanel>
+
+        <Button Name="LogOutButton" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="80" Click="LogOutButtonClick" Margin="30,85,670,503">
+            注销
+        </Button>
+        <StackPanel Orientation="Vertical" Margin="0,136,0,28" HorizontalAlignment="Left" Width="142">
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="首页" Click="MainPageButtonClick"/>
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="个人中心" Click="BuyerInformationButtonClick"/>
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="我的订单" Click="BuyerOrderButtonClick"/>
+            <Button FontSize="15" Style="{StaticResource MaterialDesignRaisedDarkButton}" Height="50" Content="我的购物车" Click="ShoppingCartButtonClick"/>
+        </StackPanel>
+        <StackPanel Margin="39,78,0,417"  HorizontalAlignment="Left" Width="232" Grid.Column="1"/>
+
+        <StackPanel Grid.ColumnSpan="2"/>
+
+        <StackPanel Name="AmountSp" Margin="228,131,142,460" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="147" TextAlignment="Right"><Run Text="金额："/></TextBlock>
+            <TextBlock Name="AmountTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Name="RecipientSp" Margin="228,165,142,426" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="147" TextAlignment="Right"><Run Text="收件人："/></TextBlock>
+            <TextBlock Name="RecipientTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="267"></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyRecipientSp" Margin="228,165,142,426" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="147" TextAlignment="Right"><Run Text="收件人："/></TextBlock>
+            <TextBox x:Name="InputRecipient" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="264" FontSize="20" Margin="0,-5,0,0"/>
+        </StackPanel>
+
+        <StackPanel Name="AddressSp" Margin="228,194,142,397" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="147" TextAlignment="Right"><Run Text="地址："/></TextBlock>
+            <TextBlock Name="AddressTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="261"></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyAddressSp" Margin="228,194,142,397" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="147" TextAlignment="Right"><Run Text="地址："/></TextBlock>
+            <TextBox x:Name="InputAddress" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="265" FontSize="20" Margin="0,-5,0,0"/>
+        </StackPanel>
+
+        <StackPanel Name="PhoneNumberSp" Margin="228,232,142,359" Orientation="Horizontal" Height="29" >
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="147" TextAlignment="Right"><Run Text="电话："/></TextBlock>
+            <TextBlock Name="PhoneNumberTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="262"></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyPhoneNumberSp" Margin="228,232,142,359" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="147" TextAlignment="Right"><Run Text="电话："/></TextBlock>
+            <TextBox x:Name="InputPhoneNumber" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="265" FontSize="20" Margin="0,-5,0,0"/>
+        </StackPanel>
+
+        <StackPanel Name="BustSp" Margin="193,295,365,296" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="胸围："/></TextBlock>
+            <TextBlock Name="BustTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"></TextBlock>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyBustSp" Margin="193,295,365,296" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="胸围："/></TextBlock>
+            <TextBox x:Name="InputBust" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="82" FontSize="20" Margin="0,-5,0,0"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+
+        <StackPanel Name="WaistSp" Margin="193,329,364,262" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="腰围："/></TextBlock>
+            <TextBlock x:Name="WaistTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyWaistSp" Margin="193,329,364,262" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="腰围："/></TextBlock>
+            <TextBox x:Name="InputWaist" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="82" FontSize="20" Margin="0,0,0,0"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="HipsSp" Margin="193,358,364,233" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="臀围："/></TextBlock>
+            <TextBlock Name="HipsTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"></TextBlock>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyHipsSp" Margin="193,358,364,233" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="臀围："/></TextBlock>
+            <TextBox x:Name="InputHips" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="82" FontSize="20" Margin="0,0,0,0"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ShoulderSp" Margin="192,387,365,204" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="肩宽："/></TextBlock>
+            <TextBlock Name="ShoulderTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"></TextBlock>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyShoulderSp" Margin="192,387,365,204" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="肩宽："/></TextBlock>
+            <TextBox x:Name="InputShoulder" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="82" FontSize="20" Margin="0,0,0,0"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ForebreastSp" Margin="486,295,71,296" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="前胸："/></TextBlock>
+            <TextBlock Name="ForebreastTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"></TextBlock>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyForebreastSp" Margin="486,295,71,296" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="前胸："/></TextBlock>
+            <TextBox x:Name="InputForebreast" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="82" FontSize="20" Margin="0,-5,0,0"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="MetathoraxSp" Margin="486,324,71,267" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="后胸："/></TextBlock>
+            <TextBlock Name="MetathoraxTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"></TextBlock>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyMetathoraxSp" Margin="486,324,71,267" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="后胸："/></TextBlock>
+            <TextBox x:Name="InputMetathorax" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="82" FontSize="20" Margin="0,-5,0,0"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="UpperlimbSp" Margin="486,351,71,240" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="上肢："/></TextBlock>
+            <TextBlock Name="UpperlimbTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"></TextBlock>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyUpperlimbSp" Margin="486,351,71,240" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="上肢："/></TextBlock>
+            <TextBox x:Name="InputUpperlimb" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="82" FontSize="20" Margin="0,-5,0,0"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="LowerlimbSp" Margin="486,387,71,204" Orientation="Horizontal" Height="29">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="下肢："/></TextBlock>
+            <TextBlock Name="LowerlimbTextBlock"  Foreground="{DynamicResource FontGray}"  FontSize="20" Width="82"></TextBlock>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+        <StackPanel Name="ModifyLowerlimbSp" Margin="486,387,71,204" Orientation="Horizontal" Height="29" Visibility="Collapsed">
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="下肢："/></TextBlock>
+            <TextBox x:Name="InputLowerlimb" Foreground="{DynamicResource FontGray}"  RenderTransformOrigin="0.5,0.5" Width="82" FontSize="20" Margin="0,-5,0,0"/>
+            <TextBlock Foreground="{DynamicResource FontGray}"  FontSize="20" Width="64"><Run Text="cm"/></TextBlock>
+        </StackPanel>
+
+
+
+
+        <StackPanel Margin="258,444,0,140"  HorizontalAlignment="Left" Width="232" Orientation="Horizontal">
+            <Button Name="SaveChangesButton" Style="{StaticResource MaterialDesignRaisedLightButton}"  Width="80" Content="保存修改" Click="SaveChangesButtonClick" Visibility="Collapsed"/>
+            <Button Name="CancelchangesButton"  Style="{StaticResource MaterialDesignRaisedLightButton}"  Width="80"  Content="取消" Margin="70,0,0,0" Click="CancelChangesButtonClick" Visibility="Collapsed"/>
+        </StackPanel>
+        <StackPanel Margin="258,444,0,140"  HorizontalAlignment="Left" Width="232" Orientation="Horizontal">
+            <Button Name="ModifyButton" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="80" Click="ModifyButtonClick">
+                修改
+            </Button>
+            <Button Name="PayButton" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="80" Margin="70,0,0,0" Click="PayButtonClick">
+                去支付
+            </Button>
+        </StackPanel>
+
+        <!--<Button Name="GetBodyButton" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="80" Margin="595,448,105,140" Click="GetBodyButtonClick">
+            获得身体参数
+        </Button>-->
+
+        <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+        	Margin="747,-2,-3,585" HorizontalAlignment="Left" Height="Auto" Click="CloseButtonClick" Width="36">
+            <Viewbox Width="24" Height="24">
+                <Canvas Width="24" Height="24">
+                    <Image Source="image/off.png" Height="24" Width="24"/>
+                </Canvas>
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+        	Margin="714,-2,0,585" HorizontalAlignment="Left" Height="Auto" Click="MinimizeButtonClick">
+            <Viewbox Width="24" Height="24" Margin="0">
+                <Canvas Width="24" Height="24">
+                    <Image Source="image/minimize.png" Height="24" Width="24"/>
+                </Canvas>
+            </Viewbox>
+        </Button>
+    </Grid>
+</Window>
